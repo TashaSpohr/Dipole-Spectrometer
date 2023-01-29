@@ -1,7 +1,4 @@
 import numpy as np
-import matplotlib.pyplot as plt
-import sympy as sp
-
 
 def truncate(f, n):
     '''Truncates/pads a float f to n decimal places without rounding'''
