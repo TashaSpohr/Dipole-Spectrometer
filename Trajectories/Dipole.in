@@ -1,0 +1,55 @@
+&NEWRUN
+  RUN=001
+  Loop=F
+  Distribution = 'Dipole.ini'
+  Version=2
+  Xoff=0
+  Yoff=0
+  Zoff = 0
+  Tau=0.0
+  Toff=0.0
+  TRACK_ALL=T
+
+  PHASE_SCAN=F
+  AUTO_PHASE=F
+  check_ref_part=F
+  H_max = 0.001			! always check this parameter for convergence
+/
+
+&OUTPUT
+  ZSTART=0			!m	Output is generated between ZStart, ZStop
+  ZSTOP= 2.397			!m	Schirm steht an dieser Entfernung (Startpunkt kurz vor erstem QP)
+  Zemit=500			!	Zemit intervalls between ZStart, ZStop - for calculation of statistical bunch parameters
+  Zphase=1			!	Complete particle distribution saved at ZPhase different locations
+  EmitS=t			! 	Output generated for beam emittanc and other statistical beam parameters
+  PhaseS=t			!
+  TrackS=t			!
+  RefS=f			!
+  TcheckS=f			!
+  CathodeS=f			!
+  High_res=T 			!
+  Local_emit = F		!	For screen
+ /
+ 
+ &CHARGE
+  LSpCh = f
+ / 
+
+
+ &MODULES  
+  LModule = T
+  Module(1,1) = 'Cavity(1)'                                                              
+    
+  Mod_Efield(1) = -1.16775!-1.0883!-1.18635!-1.16775!-1.3047
+  /
+
+
+ &CAVITY
+  LEfield=T,      
+  File_EField(1)= '3DFeld',
+  C_noscale(1)=T 
+  By_stat(1)=T !redirects parameter MaxE() to transverse magnetic component in y 
+  C_xrot(1)= -1.0471975511965976! -60° 5.235987755982989 !300°
+  C_xoff(1) = 0.08113  !m
+  C_pos(1) = 1.874   !m
+/
