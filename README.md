@@ -1,1 +1,1 @@
-# Dipole-Spectrometer-BA
+# Dipole-Spectrometer
