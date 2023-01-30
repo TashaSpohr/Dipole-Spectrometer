@@ -11,4 +11,8 @@ Then, the earlier calculated effective length of the dipole spectrometer must be
 p/I is then calculated. 
 This gives the first major result.
 
-The folder "TrafoMatrix" contains the calculations for the transformation matrix. For that, the 3D field from earlier is implemented 
+The folder "TrafoMatrix" contains the calculations for the transformation matrix. For that, the 3D field from earlier is implemented into the file given in that folder. 
+The transformation matrix is first calculated using characteristical matrices, then the propagation of the electron bunch is shown in phase space. 
+The transformation matrix is then fitted.
+
+The fitted matrix needs to be copied into the file in the "calculations" folder. From there, the quadrupole magnet refinement is carried out.
